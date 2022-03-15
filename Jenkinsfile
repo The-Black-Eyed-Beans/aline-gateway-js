@@ -8,7 +8,7 @@ pipeline {
     environment {
         AWS_ID = credentials("aws.id")
         DEPLOYMENT_REGION = credentials("deployment.region")
-        MICROSERVICE_NAME = "gateway-microservice-js"
+        MICROSERVICE_NAME = "gateway-js"
     }
 
     stages {

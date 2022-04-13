@@ -16,8 +16,6 @@ ENV DB_PASSWORD=password
 ENV DB_HOST=host.docker.internal
 ENV DB_PORT=3307
 ENV DB_NAME=alinedb
-ENV ENCRYPT_SECRET_KEY=NVNCWq4KEDHXNjsazdGX20Z1
-ENV JWT_SECRET_KEY=1wHqQFdUlUr5TZNr1wTCiuyM0Vye2L4jX
 
 COPY target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]

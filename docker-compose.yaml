@@ -1,0 +1,10 @@
+x-aws-cluster: "ECScluster-js"
+
+version: "3.9"
+services:
+  bank:
+    image: 086620157175.dkr.ecr.us-west-1.amazonaws.com/gateway-js
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./backend.env

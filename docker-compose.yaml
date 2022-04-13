@@ -8,3 +8,10 @@ services:
       - "8080:8080"
     env_file:
       - ./backend.env
+
+
+x-aws-cloudformation:
+  Resources:
+    BankService:
+      Properties:
+        ServiceName: gateway-service-js

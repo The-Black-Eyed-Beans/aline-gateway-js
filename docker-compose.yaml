@@ -12,6 +12,6 @@ services:
 
 x-aws-cloudformation:
   Resources:
-    GatewayService:
+    BankService:
       Properties:
         ServiceName: gateway-service-js

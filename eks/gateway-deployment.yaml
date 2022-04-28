@@ -23,11 +23,11 @@ spec:
         - name: APP_SERVICE_HOST
           value: aline-backend-service
         - name: PORTAL_LANDING
-          value: 4200
+          value: '4200'
         - name: PORTAL_DASHBOARD
-          value: 3007
+          value: '3007'
         - name: PORTAL_ADMIN
-          value: 3000
+          value: '3000'
         ports:
         - name: gateway
           containerPort: 8080

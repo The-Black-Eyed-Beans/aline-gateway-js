@@ -31,8 +31,5 @@ spec:
         ports:
         - name: gateway
           containerPort: 8080
-      tolerations:
-        - key: "frontend"
-          operator: "Equal"
-          value: "true"
-          effect: "NoSchedule"
+      nodeSelector:
+        backend: "false"

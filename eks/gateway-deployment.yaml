@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-deployment
+  labels:
+    app: aline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aline
+  template:
+    metadata:
+      labels:
+        app: aline
+    spec:
+      containers:
+      - name: gateway
+        image: 086620157175.dkr.ecr.us-east-1.amazonaws.com/gateway
+        env:
+        - name: APP_PORT
+          value: '8080'
+        - name: APP_SERVICE_HOST
+          value: aline-backend-service
+        - name: PORTAL_LANDING
+          value: '4200'
+        - name: PORTAL_DASHBOARD
+          value: '3007'
+        - name: PORTAL_ADMIN
+          value: '3000'
+        ports:
+        - name: gateway
+          containerPort: 8080
+      nodeSelector:
+        backend: "false"
